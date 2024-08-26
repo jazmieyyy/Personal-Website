@@ -1,0 +1,290 @@
+@font-face {
+    font-family: Darlington-Demo;
+    src: url(../DarlingtonDemo-z8xjG.ttf);
+}
+
+:root {
+    --primary-color: #a855f7;
+    --primary-color-dark: #9333ea;
+    --secondary-color: #ca8a04;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+}
+
+.nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.navbar{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    align-items: left;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);   
+}
+
+nav .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  
+  ul li a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+a{
+    color: rgb(36, 35, 35);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.resume{
+    color: blue;
+}
+
+.section {
+    padding: 50px 20px; 
+    /*min-height: 100vh;*/
+}
+
+.contact-form{
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.text-container h1{
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgb(17, 65, 76);
+    border: 2px solid rgb(6, 50, 59);
+}
+
+.text-container{
+    flex: 1;
+    color: white;
+    margin-right: 20px;
+}
+
+.text-container h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-profiles{
+    margin-top: 20px;
+}
+
+.social-profiles a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.container-2 {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(11, 8, 8);
+}
+
+.container-2 label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+}
+
+.container-2 input,
+.container-2 textarea{
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    outline: none;
+}
+
+.submit-btn{
+    background-color: #3987da;
+    color: white;
+    padding: 10px 20px;
+    width: 90%;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    max-block-size: absolute;
+}
+
+.submit-btn:hover{
+    scale: 1.05;
+}
+
+.section_container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 4rem;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle{
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.title span{
+    font-weight: 600;  
+}
+
+.description{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.image{
+    display: grid;
+    place-items: center;
+}
+
+.image img{
+    width: min(20rem, 100%);
+    border-radius: 100%;
+}
+
+@media(max-width: 750px){
+    .navbar .links{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .links a{
+        padding: 15px;
+    }
+    
+}
+
+@media(max-width: 480px){
+    .navbar .logo a{
+        font-size: 1.2rem;
+    }
+
+    .section{
+        padding: 60px 10px;
+    }
+
+    .section_container{
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image{
+        grid-area: 1/1/2/2;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
